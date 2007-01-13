@@ -1,7 +1,11 @@
 #!/usr/bin/env python
-import threading,time,bluetooth,os,random
+import threading,time,bluetooth,os,random,re
+fileliste = []
+fileliste = os.listdir("annonce")
 filelist = []
-filelist = os.listdir("annonce")
+for file in fileliste :
+    if re.search('\.mp3',file):
+        filelist.append(file)
 telfile = open('adressetel.txt','r')
 for i in telfile :
     tel = i
