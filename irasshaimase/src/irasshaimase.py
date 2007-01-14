@@ -20,7 +20,7 @@ class T (threading.Thread) :
         self.filelist = _filelist
     def run(self) :
         while(True):
-            time.sleep(8)
+            time.sleep(10)
             jeton = 0
             nearby_devices = bluetooth.discover_devices(lookup_names = True)
             for name, addr in nearby_devices:
